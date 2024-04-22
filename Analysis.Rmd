@@ -1,0 +1,69 @@
+---
+title: "ECON 464 - Final Project"
+output: word_document
+date: "2024-04-19"
+---
+
+```{r, warning = FALSE, message= FALSE}
+# Import libraries
+
+library("readxl")
+library(tidyverse)
+
+```
+
+```{r,warning = FALSE, message = FALSE}
+
+merged_data <- read_excel("/Users/dangminh0912/Desktop/Year 4 (Sem 2)/ECON 464/Final Project/Data set/MergedData.xlsx")
+```
+
+```{r, warning = FALSE, message = FALSE}
+merged_data %>% ggplot(aes(x= AGE, y = Salary)) +
+  geom_point()+
+  geom_smooth(method = 'lm', formula = y ~ x + I(x^2), size = 1)+
+  scale_y_continuous(labels = scales::comma)
+
+merged_data %>% ggplot(aes(x= GP, y = Salary)) +
+  geom_point()+
+  geom_smooth(method = 'lm',, formula = y ~ x + I(x^2), size = 1)+
+  scale_y_continuous(labels = scales::comma)
+
+merged_data %>% ggplot(aes(x= GP, y = Salary)) +
+  geom_point()+
+  geom_smooth(method = 'lm', formula = y ~ x + I(x^2), size = 1)+
+  scale_y_continuous(labels = scales::comma)
+
+merged_data %>% ggplot(aes(x= W, y = Salary)) +
+  geom_point()+
+  geom_smooth(method = 'lm', formula = y ~ x + I(x^2), size = 1)+
+  scale_y_continuous(labels = scales::comma)
+
+merged_data %>% ggplot(aes(x= L, y = Salary)) +
+  geom_point()+
+  geom_smooth(method = 'lm', formula = y ~ x + I(x^2), size = 1)+
+  scale_y_continuous(labels = scales::comma)
+
+merged_data %>% ggplot(aes(x= MIN, y = Salary)) +
+  geom_point()+
+  geom_smooth(method = 'lm', formula = y ~ x + I(x^2), size = 1)+
+  scale_y_continuous(labels = scales::comma)
+
+merged_data %>% ggplot(aes(x= PTS, y = Salary)) +
+  geom_point()+
+  geom_smooth(method = 'lm', formula = y ~ x + I(x^2), size = 1)+
+  scale_y_continuous(labels = scales::comma)
+
+merged_data %>% ggplot(aes(x = `+/-` , y = Salary)) +
+  geom_point()+
+  geom_smooth(method = 'lm', formula = y ~ x + I(x^2), size = 1) +
+  scale_y_continuous(labels = scales::comma)
+
+merged_data %>% ggplot(aes(x = Gender))+
+  geom_bar()
+  
+```
+```{r, warning = FALSE, message = FALSE}
+
+
+```
+
